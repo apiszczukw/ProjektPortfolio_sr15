@@ -1,0 +1,33 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sarina&family=Tiny5&display=swap');
+
+:root {
+    --primary-100: #ffedd8;
+    --primary-200: #f3d5b5;
+    --primary-300: #e7bc91;
+    --primary-400: #d4a276;
+    --primary-500: #bc8a5f;
+    --primary-600: #a47148;
+    --primary-700: #8b5e34;
+    --primary-800: #6f4518;
+    --primary-900: #603808;
+    
+    --bodyFontColor: var(--primary-900);
+    --backgroundColor: var(--primary-100);
+    
+    --bodyFontFamily: "Lato", serif;
+    --headerFontFamily: "Sarina", cursive;
+    --specialFontFamily: "Tiny5", sans-serif;
+}
+
+body 
+{
+    color: var(--bodyFontColor);
+    background-color: var(--backgroundColor);
+    font-family: var(--bodyFontFamily);
+}
+
+h1, h2, h3, h4, h5 
+{
+    font-family: var(--headerFontFamily);
+}
+
