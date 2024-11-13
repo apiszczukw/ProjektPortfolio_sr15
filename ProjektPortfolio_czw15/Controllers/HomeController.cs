@@ -18,9 +18,9 @@ namespace ProjektPortfolio_czw15.Controllers
 			return View();
 		}
 
-		public IActionResult Privacy()
+		public IActionResult Sites(string name)
 		{
-			return View();
+			return View(name);
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

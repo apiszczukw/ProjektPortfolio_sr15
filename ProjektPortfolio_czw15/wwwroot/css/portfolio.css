@@ -24,6 +24,7 @@ body
     color: var(--bodyFontColor);
     background-color: var(--backgroundColor);
     font-family: var(--bodyFontFamily);
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5 
@@ -31,3 +32,78 @@ h1, h2, h3, h4, h5
     font-family: var(--headerFontFamily);
 }
 
+/* Panel nawigacyjny */
+.navbar 
+{
+   
+    display:flex;
+    justify-content: center;
+}
+
+.nav-center
+{
+   
+    width: 90vw;
+}
+
+.nav-header
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.btn
+{
+    background-color: var(--primary-500);
+    color: white;
+    border: transparent;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.nav-btn i 
+{
+    font-size: 1.3rem;
+}
+
+.nav-header img 
+{
+    height: 5rem;
+}
+
+.nav-links 
+{
+    display: flex;
+    flex-direction: column;
+
+    height:0;
+    overflow: hidden;
+}
+
+.show-links
+{
+    height: auto;
+}
+
+.nav-link 
+{
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1.3rem;
+    color: var(--bodyFontColor);
+    letter-spacing: 1px;
+    border-top: 1px solid var(--primary-500);
+}
+
+.nav-link:hover
+{
+    color: var(--primary-300);
+}
+
+.nav-links a 
+{
+    text-decoration: none;
+}

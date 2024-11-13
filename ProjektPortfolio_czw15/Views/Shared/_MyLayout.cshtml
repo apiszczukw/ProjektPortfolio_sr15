@@ -9,13 +9,19 @@
 		<div class="nav-center">
 			<div class="nav-header">
 				<a asp-controller="Home" asp-action="Index">
-					<img width="100px" src="~/assets/nadine-e-icxpxfblvlg-unsplash.jpg" />
+					<img src="~/assets/nadine-e-icxpxfblvlg-unsplash.jpg" />
 				</a>
 				<button class="nav-btn btn">
 					<i class="fa-solid fa-bars"></i>
 				</button>
 			</div>
 			<div class="nav-links">
+				<a class="nav-link" asp-controller="Home" asp-action="Sites" asp-route-name="Omnie"> O mnie </a>
+				<a class="nav-link" asp-controller="Home" asp-action="Sites" asp-route-name="CV"> Curriculum Vitae </a>
+				<a class="nav-link"  asp-controller="Home" asp-action="Sites" asp-route-name="Projekty"> Projekty </a>
+				<div class="nav-link contact-link">
+					<a class="btn" asp-controller="Home" asp-action="Sites" asp-route-name="Kontakt"> Kontakt </a>
+				</div>
 			</div>
 		</div>
 	</nav>
@@ -23,5 +29,7 @@
 
 	@RenderBody()
 	<i style="color: brown; font-size: 50px;" class="fa-solid fa-poo"></i>
+
+	<script src="~/js/site.js"></script>
 </body>
 </html>
