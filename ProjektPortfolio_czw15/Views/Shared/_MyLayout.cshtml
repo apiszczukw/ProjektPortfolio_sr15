@@ -11,7 +11,7 @@
 				<a asp-controller="Home" asp-action="Index">
 					<img src="~/assets/nadine-e-icxpxfblvlg-unsplash.jpg" />
 				</a>
-				<button class="nav-btn btn">
+				<button class="nav-btn btn" onclick="show()">
 					<i class="fa-solid fa-bars"></i>
 				</button>
 			</div>
@@ -26,9 +26,15 @@
 		</div>
 	</nav>
 
+	<main class="main-page">
 
-	@RenderBody()
-	<i style="color: brown; font-size: 50px;" class="fa-solid fa-poo"></i>
+		@RenderBody()
+		<i style="color: brown; font-size: 50px;" class="fa-solid fa-poo"></i>
+	</main>
+
+	<footer class="page-footer">
+		🍺 Strona wykonana przez Adriannę Piszcz
+	</footer>
 
 	<script src="~/js/site.js"></script>
 </body>

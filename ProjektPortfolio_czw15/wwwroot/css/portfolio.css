@@ -30,6 +30,7 @@ body
 h1, h2, h3, h4, h5 
 {
     font-family: var(--headerFontFamily);
+    margin: 0;
 }
 
 /* Panel nawigacyjny */
@@ -81,11 +82,14 @@ h1, h2, h3, h4, h5
 
     height:0;
     overflow: hidden;
+
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 }
 
 .show-links
 {
-    height: auto;
+    height: 300px;
 }
 
 .nav-link 
@@ -106,4 +110,64 @@ h1, h2, h3, h4, h5
 .nav-links a 
 {
     text-decoration: none;
+}
+
+@media screen and (min-width: 750px)
+{
+    .nav-btn
+    {
+        display: none;
+    }
+
+    .nav-links 
+    {
+        height: auto;
+        flex-direction: row;
+        justify-content: left;
+        width: 100%;
+    }
+
+    .nav-center 
+    {
+        display: flex;
+        align-items: center;
+        max-width: 1280px;
+    }
+
+    .nav-link
+    {
+        border-top: none;
+        margin-right: 1rem;
+    }
+
+    .nav-header {
+        margin-right: 2rem;
+    }
+
+    .contact-link {
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+
+.main-page 
+{
+    width: 90vw;
+    height: calc(100vh - 5rem - 3.5rem);
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-footer
+{
+    height: 3.5rem;
+    background-color: var(--primary-800);
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
