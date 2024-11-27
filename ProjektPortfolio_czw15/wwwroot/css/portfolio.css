@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5
 .main-page 
 {
     width: 90vw;
-    height: calc(100vh - 5rem - 3.5rem);
+    min-height: calc(100vh - 5rem - 3.5rem);
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -170,4 +170,89 @@ h1, h2, h3, h4, h5
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* PROJEKTY */
+.projects img
+{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 7.5rem; 
+    object-fit: cover;
+    margin: 2rem 0;
+}
+
+.projects
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.project
+{
+    flex: 1;
+    padding: 1rem 2rem;
+}
+
+.project i 
+{
+    margin-right: 2rem;
+    color: var(--primary-700);
+}
+
+/* Strona główna */
+
+div[class|="welcome"]
+{
+    font-size: 3rem;
+    font-family: var(--specialFontFamily);
+    color: var(--primary-200);
+    position: relative;
+    
+}
+
+    div[class|="welcome"]::after {
+        content: attr(data-loading-text);
+        color: var(--primary-600);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        overflow: hidden;
+        animation-name: loading;
+        
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+
+.wel-page 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 5rem - 3.5rem);
+}
+
+.welcome::after {
+    animation-duration: 3s;
+}
+
+.welcome-name::after {
+    animation-delay: 3s;
+    animation-duration: 6s;
+}
+
+@keyframes loading
+{
+    0%
+    {
+        width: 0%;
+    }
+
+    100%
+    {
+        width: 100%;
+    }
 }
