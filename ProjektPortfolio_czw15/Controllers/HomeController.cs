@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProjektPortfolio_czw15.DAL;
 using ProjektPortfolio_czw15.Models;
 using System.Diagnostics;
 
@@ -6,15 +7,22 @@ namespace ProjektPortfolio_czw15.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ILogger<HomeController> _logger;
+		ProjektyContext db;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ProjektyContext db)
 		{
-			_logger = logger;
+			this.db = db;
 		}
 
 		public IActionResult Index()
 		{
+			return View();
+		}
+
+		public IActionResult Projekty()
+		{
+			ViewBag.Projekty = db.Projekty.ToList();
+
 			return View();
 		}
 

@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using ProjektPortfolio_czw15.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ProjektyContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("ProjektyCS")));
 
 var app = builder.Build();
 
